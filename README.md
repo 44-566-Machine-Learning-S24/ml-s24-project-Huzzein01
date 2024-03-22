@@ -5,36 +5,28 @@ Repo for all project documents
 # Traffic Analysis Project
 
 ## Overview
-This project aims to analyze traffic data collected at various time intervals to understand traffic patterns, trends, and relationships between different variables. The project includes exploratory data analysis, predictive modeling using machine learning techniques, and evaluation of model performance.
+This project aims to analyze traffic data using machine learning techniques to understand traffic patterns and predict traffic situations. The project includes several notebooks, each focusing on different aspects of the analysis.
 
-## Notebooks
+### Notebooks Overview
+1. Data Exploration
+This notebook explores the dataset containing traffic data, including timestamps, vehicle counts, and traffic situations. It examines the distribution of features, identifies any missing values, and visualizes key insights using plots and graphs.
 
-### 1. data_exploration.ipynb
-- This notebook contains exploratory data analysis (EDA) of the traffic dataset.
-- Important findings from the EDA include:
-  - Identification of peak traffic hours during weekdays.
-  - Analysis of traffic patterns across different days of the week.
-  - Examination of correlations between various features such as vehicle counts and total traffic volume.
+2. Feature Engineering
+In this notebook, we perform feature engineering to extract useful features from the raw data. This includes converting timestamps into numerical features, creating lag features to capture temporal patterns, and encoding categorical variables.
 
-### 2. linear_regression.ipynb
-- Initial Data Prep Section:
-  - Reads and cleans the dataset.
-  - Creates training and testing sets.
-- Linear Regression:
-  - Performs linear regression on the selected features and target variable.
-  - Computes metrics such as mean squared error and R-squared.
-- Comments on Results:
-  - Discusses the performance of the initial linear regression model and potential areas for improvement.
+3. Initial Data Preparation
+The initial data prep notebook reads, cleans, and prepares the dataset for modeling. It selects relevant features and splits the data into training and testing sets.
 
-### 3. additional_analysis.ipynb
-- Investigates additional features or models to improve prediction accuracy.
-- Explores feature engineering, feature selection, or alternative machine learning algorithms.
-- Final Evaluation with Test Set:
-  - Evaluates the final model's performance on the test set.
-  
-### 4. README.md
-- Overview of the project.
-- Comments on each notebook and important results.
+4. Decision Tree Classifier
+The decision tree classifier notebook implements a basic classification model using a decision tree algorithm. It evaluates the model's performance using metrics such as precision, recall, and F1-score.
 
-## Conclusion
-Overall, this project provides insights into traffic dynamics and explores predictive modeling techniques to forecast traffic volume. By analyzing traffic data and building predictive models, the project aims to contribute to transportation planning and management efforts.
+5. Support Vector Machine (SVM) Classifier
+This notebook explores the use of SVM as an alternative classifier to improve the model's performance. It compares the results of SVM with the decision tree classifier and discusses any improvements.
+
+6. Model Evaluation and Comparison
+In this notebook, we perform a final evaluation of the models using the test set. We compare the performance of the decision tree classifier and SVM, analyzing their respective strengths and weaknesses.
+
+### Important Results
+The decision tree classifier achieved an overall accuracy of 0.75, with precision and recall scores varying across different traffic situations.
+SVM outperformed the decision tree classifier with an accuracy of 0.80, indicating its effectiveness in handling non-linear data.
+Feature engineering played a crucial role in improving model performance by extracting relevant features and encoding categorical variables.
